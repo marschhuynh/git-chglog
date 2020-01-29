@@ -332,6 +332,9 @@ func (gen *Generator) render(w io.Writer, unreleased *Unreleased, versions []*Ve
 		"upper": func(s string) string {
 			return strings.ToUpper(s)
 		},
+		"title": func(s string) string {
+			return strings.ToTitle(s)
+		},
 	}
 
 	fname := filepath.Base(gen.config.Template)
